@@ -89,7 +89,7 @@
         </tr>
     </table>
         <div class="btn btn-group">
-            <input class="btn btn-danger" type="submit" value="enviar">
+            <input class="btn btn-primary" type="submit" value="enviar">
         </div>
     </div>
 </div>
