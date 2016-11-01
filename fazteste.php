@@ -123,8 +123,6 @@ while ($repeticao < $repetir) {
     echo "<br>";
 }
 
-
-
 // Após a execução da página, geramos a variavel $fim, que nos dará o tempo final da execução da página
 $fim = execucao();
 
