@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/loja.css">
-
     <title>[PHP] Teste de desempenho de banco de dados</title>
 </head>
 <body>
