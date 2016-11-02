@@ -35,11 +35,12 @@
             d.senha.focus();
             return false;
         }
-        if (d.schema.value == ""){
+        //valida campo schema
+     /*   if (d.schema.value == ""){
             alert("O campo " + d.schema.name + " deve ser preenchido!");
             d.schema.focus();
             return false;
-        }
+        }*/
         //validar repetir
         if (d.repetir.value == ""){
             alert("O campo Numero de Execuções de Teste deve ser preenchido!");

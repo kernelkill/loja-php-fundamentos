@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <title> Teste de Conexão </title>
 </head>
 <body>
@@ -64,12 +65,12 @@ while ($repeticao < $repetir) {
     $result1 = null;
     $row = null;
 
-    $link = mysql_connect($host, $login, $senha, $schema)or die("Falha ao se conectar ao banco. Verifique se os dados de conexão estão corretos.");;
+    $link = mysql_connect($host, $login, $senha, $schema)or die("<h1><p class='alert-danger'>Falha ao se conectar ao banco. Verifique se os dados de conexão estão corretos, como senha, usuario e etc.</p></h1>");;
     if (!$link) {
         echo 'Nao foi possivel conectar: '. mysql_error() . '<br>';
         exit;
     } else {
-        echo 'Conectado ao banco de dados como ' .$login. ' no servidor '.$host. ' na base de dados ' .$schema. ' <br>';
+        echo '<h2><p class="alert-success">Conectado no servidor de banco de dados como <b>' .$login. '</b> no servidor <b> '.$host. '</b> na base de dados <b>' .$schema. ' </b></p></h2><br/>';
     }
 
     $dbname = $schema;
@@ -79,7 +80,7 @@ while ($repeticao < $repetir) {
     $result = mysql_query($sql);
 
     if (!$result) {
-        echo "DB Error, could not list tables\n";
+        echo "DB Error, tabela não pode ser listada\n";
         echo 'MySQL Error: ' . mysql_error();
         exit;
     }  /*else {
@@ -119,7 +120,7 @@ while ($repeticao < $repetir) {
     }
     mysql_close($link);
     $repeticao++;
-    echo "execução numero: ". $repeticao;
+    echo "<h2><p class='alert-success'>execução numero: ". $repeticao . "</p></h2>";
     echo "<br>";
 }
 
@@ -130,7 +131,7 @@ $fim = execucao();
 $tempo = number_format(($fim-$inicio),6);
 
 // Agora á só imprimir o resultado
-print "Tempo de Execução: <b>".$tempo."</b> segundos";
+print "<h2><p class='alert-success'>Tempo de Execução: <b>".$tempo."</b> segundos </p></h2>";
 
 ?>
 </body>
