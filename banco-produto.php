@@ -25,3 +25,8 @@ function insereProduto($conexao,$nome,$preco){
     $query = "insert into produtos (nome, preco) VALUES ('{$nome}', {$preco})";
     return  mysqli_query($conexao, $query);
 }
+
+function removeProduto($conexao, $id){
+    $query = "delete from produtos where id = {$id}";
+    return mysqli_query($conexao, $query);
+}
