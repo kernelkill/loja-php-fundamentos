@@ -6,8 +6,6 @@
  * Time: 12:14
  */
 
-
-
 //Função que ista produtos.
 function listaProdutos($conexao){
 
@@ -21,8 +19,8 @@ function listaProdutos($conexao){
 }
 
 //Função que adiciona produtos.
-function insereProduto($conexao,$nome,$preco){
-    $query = "insert into produtos (nome, preco) VALUES ('{$nome}', {$preco})";
+function insereProduto($conexao,$nome,$preco,$descricao){
+    $query = "insert into produtos (nome, preco, descricao) VALUES ('{$nome}', {$preco}, '{$descricao }')";
     return  mysqli_query($conexao, $query);
 }
 
