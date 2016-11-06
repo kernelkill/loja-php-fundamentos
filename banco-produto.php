@@ -1,0 +1,27 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: kachorroski
+ * Date: 06/11/16
+ * Time: 12:14
+ */
+
+
+
+//Função que ista produtos.
+function listaProdutos($conexao){
+
+    $produtos = array();
+    $result = mysqli_query($conexao, "select * from produtos");
+    while ($produto = mysqli_fetch_assoc($result)) {
+        array_push($produtos, $produto);
+    }
+
+    return $produtos;
+}
+
+//Função que adiciona produtos.
+function insereProduto($conexao,$nome,$preco){
+    $query = "insert into produtos (nome, preco) VALUES ('{$nome}', {$preco})";
+    return  mysqli_query($conexao, $query);
+}
