@@ -6,11 +6,12 @@ include("banco-produto.php");
 $nome = $_POST["nome"];
 $preco = $_POST["preco"];
 $descricao = $_POST["descricao"];
+$categoria_id = $_POST['categoria_id'];
 
 
 include("conecta.php");
 
-if(insereProduto($conexao, $nome, $preco, $descricao)){ ?>
+if(insereProduto($conexao, $nome, $preco, $descricao, $categoria_id)){ ?>
     <p class="text-success">Produto <?= $nome; ?>, <?= $preco; ?> adicionado com sucesso</p>
 <?php
     }else{
