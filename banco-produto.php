@@ -19,8 +19,10 @@ function listaProdutos($conexao){
 }
 
 //Função que adiciona produtos.
-function insereProduto($conexao,$nome,$preco,$descricao, $categoria_id){
-    $query = "insert into produtos (nome, preco, descricao, categoria_id) VALUES ('{$nome}', {$preco}, '{$descricao }', {$categoria_id})";
+function insereProduto($conexao,$nome,$preco,$descricao, $categoria_id, $usado){
+    $query = "insert into produtos (nome, preco, descricao, categoria_id, usado) VALUES ('{$nome}', {$preco}, '{$descricao }', 
+{$categoria_id}, {$usado})";
+    echo $query;
     return  mysqli_query($conexao, $query);
 }
 
