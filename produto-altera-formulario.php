@@ -13,7 +13,7 @@ $usado = $produto['usado'] ? "checked='checked'" : "";
 
     <h1>Alterando Produto</h1>
     <form action="altera-produto.php" method="post">
-
+        <input type="hidden" name="id" value="<?=$produto['id']?>">
         <table class="table">
             <tr>
                 <td>Nome:</td>

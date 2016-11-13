@@ -2,9 +2,10 @@
 include("cabecalho.php");
 include("banco-produto.php");
 
-$nome = $_POST["nome"];
-$preco = $_POST["preco"];
-$descricao = $_POST["descricao"];
+$id = $_POST['id'];
+$nome = $_POST['nome'];
+$preco = $_POST['preco'];
+$descricao = $_POST['descricao'];
 $categoria_id = $_POST['categoria_id'];
 if (array_key_exists('usado', $_POST)){
     $usado = "true";
@@ -14,7 +15,7 @@ if (array_key_exists('usado', $_POST)){
 
 include("conecta.php");
 
-if(alteraProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado)){ ?>
+if(alteraProduto($conexao, $id ,$nome, $preco, $descricao, $categoria_id, $usado)){ ?>
     <p class="text-success">Produto <?= $nome; ?>, <?= $preco; ?> foi alterado com sucesso</p>
     <?php
 }else{
