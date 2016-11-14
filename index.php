@@ -4,7 +4,7 @@
 <?php } ?>
 
 <?php if(isset($_GET["login"]) && $_GET["login"] == false) { ?>
-    <p class="alert-success"> Usuario ou Senha Invalidos.</p>
+    <p class="alert-danger"> Usuario ou Senha Invalidos.</p>
 <?php } ?>
 
 <h1>Bem-Vindo!</h1>
