@@ -8,6 +8,6 @@
 
 include ("valida-usuario.php");
 logout();
-$_SESSION["success"] = "deslogado com sucesso!";
+$_SESSION["success"] = "Deslogado com sucesso!";
 header("Location: index.php");
 die();
