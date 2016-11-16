@@ -34,4 +34,5 @@ function usuarioLogado(){
 function logout(){
    session_destroy();
     //unset($_SESSION["usuario_logado"]);
+    session_start();
 }
