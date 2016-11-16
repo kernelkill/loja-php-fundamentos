@@ -22,7 +22,7 @@ function listaProdutos($conexao){
 function insereProduto($conexao,$nome,$preco,$descricao, $categoria_id, $usado){
     $query = "insert into produtos (nome, preco, descricao, categoria_id, usado) VALUES ('{$nome}', {$preco}, '{$descricao }', 
 {$categoria_id}, {$usado})";
-    echo $query;
+    //echo $query;
     return  mysqli_query($conexao, $query);
 }
 

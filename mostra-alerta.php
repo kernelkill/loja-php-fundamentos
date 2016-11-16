@@ -6,6 +6,7 @@
  * Time: 21:21
  */
 
+session_start();
 function mostraAlerta($tipo){
     if (isset($_SESSION[$tipo])){
         ?>
