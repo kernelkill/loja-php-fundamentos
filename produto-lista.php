@@ -1,11 +1,9 @@
 <?php include("cabecalho.php");
 include("conecta.php");
 include("banco-produto.php");
+include ("valida-usuario.php");
 
-if (!isset($_COOKIE["usuario_logado"])){
-    header("Location:index.php?falhaDeSeguranca=true");
-    die();
-}
+verificaUsuarioLogado();
 ?>
 
 <?php if (array_key_exists("removido", $_GET) && $_GET['removido'] == 'true') {

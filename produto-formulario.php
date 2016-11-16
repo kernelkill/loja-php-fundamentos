@@ -1,12 +1,9 @@
 <?php include("cabecalho.php");
 include("conecta.php");
 include("banco-categoria.php");
+include("valida-usuario.php");
 
-if (!isset($_COOKIE["usuario_logado"])){
-    header("Location:index.php?falhaDeSeguranca=true");
-    die();
-}
-
+verificaUsuarioLogado();
 $categorias = listaCategorias($conexao);
 ?>
 

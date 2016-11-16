@@ -2,11 +2,9 @@
 
 include("cabecalho.php");
 include("banco-produto.php");
+include("valida-usuario.php");
 
-if (!isset($_COOKIE["usuario_logado"])){
-    header("Location:index.php?falhaDeSeguranca=true");
-    die();
-}
+verificaUsuarioLogado();
 
 $nome = $_POST["nome"];
 $preco = $_POST["preco"];
