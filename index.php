@@ -15,9 +15,11 @@ include("valida-usuario.php");
     <p class="alert-danger"> Usuario ou Senha Invalidos.</p>
 <?php } ?>
 
-<?php if (isset($_GET["falhaDeSeguranca"]) && $_GET["falhaDeSeguranca"] == true) { ?>
-    <p class="alert-danger"> Você nao esta logado, permissão negada!</p>
-<?php } ?>
+<?php if (isset($_SESSION["danger"])) { ?>
+    <p class="alert-danger"> <?= $_SESSION["danger"]?></p>
+<?php }
+    unset($_SESSION["danger"]);
+?>
 
 <h1>Bem-Vindo!</h1>
 <?php if (usuarioEstaLogado()) { ?>
