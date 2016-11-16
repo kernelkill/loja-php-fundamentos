@@ -29,3 +29,8 @@ function verificaUsuarioLogado()
 function usuarioLogado(){
     return $_SESSION["usuario_logado"];
 }
+
+function logout(){
+   session_destroy();
+    //unset($_SESSION["usuario_logado"]);
+}

@@ -3,6 +3,10 @@ include("cabecalho.php");
 include("valida-usuario.php");
 ?>
 
+<?php if (isset($_GET["logout"]) && $_GET["logout"] == true) { ?>
+    <p class="alert-success"> Deslogado com sucesso.</p>
+<?php } ?>
+
 <?php if (isset($_GET["login"]) && $_GET["login"] == true) { ?>
     <p class="alert-success"> Login efetuado com sucesso.</p>
 <?php } ?>
