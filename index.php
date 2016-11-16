@@ -1,12 +1,6 @@
 <?php
 include("cabecalho.php");
 include("valida-usuario.php");
-include ("mostra-alerta.php");
-?>
-
-<?php
-mostraAlerta("success");
-mostraAlerta("danger");
 ?>
 
 <h1>Bem-Vindo!</h1>

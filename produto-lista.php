@@ -1,12 +1,10 @@
 <?php include("cabecalho.php");
 include("conecta.php");
 include("banco-produto.php");
-include ("mostra-alerta.php");
+include("valida-usuario.php");
 
-mostraAlerta("success");
-
+verificaUsuarioLogado();
 ?>
-
 
 <table class="table table-striped table-bordered">
     <tbody>

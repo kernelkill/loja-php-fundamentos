@@ -19,7 +19,7 @@ if (array_key_exists('usado', $_POST)){
 include("conecta.php");
 
 if(insereProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado)){ ?>
-    <p class="text-success">Produto <?= $nome; ?>, <?= $preco; ?> adicionado com sucesso</p>
+    <p class="text-success">Produto <?= $nome; ?>, no valor de R$<?= $preco; ?> adicionado com sucesso</p>
 <?php
     }else{
     $msg = mysqli_error($conexao)
