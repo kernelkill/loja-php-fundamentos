@@ -1,10 +1,15 @@
 <?php include("cabecalho.php"); ?>
+
 <?php if (isset($_GET["login"]) && $_GET["login"] == true) { ?>
     <p class="alert-success"> Login efetuado com sucesso.</p>
 <?php } ?>
 
 <?php if (isset($_GET["login"]) && $_GET["login"] == false) { ?>
     <p class="alert-danger"> Usuario ou Senha Invalidos.</p>
+<?php } ?>
+
+<?php if (isset($_GET["falhaDeSeguranca"]) && $_GET["falhaDeSeguranca"] == true) { ?>
+    <p class="alert-danger"> Você nao esta logado, permissão negada!</p>
 <?php } ?>
 
 <h1>Bem-Vindo!</h1>

@@ -2,6 +2,10 @@
 include("conecta.php");
 include("banco-categoria.php");
 
+if (!isset($_COOKIE["usuario_logado"])){
+    header("Location:index.php?falhaDeSeguranca=true");
+    die();
+}
 
 $categorias = listaCategorias($conexao);
 ?>

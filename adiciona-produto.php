@@ -1,7 +1,12 @@
-<?php include("cabecalho.php");?>
 <?php
 
+include("cabecalho.php");
 include("banco-produto.php");
+
+if (!isset($_COOKIE["usuario_logado"])){
+    header("Location:index.php?falhaDeSeguranca=true");
+    die();
+}
 
 $nome = $_POST["nome"];
 $preco = $_POST["preco"];
