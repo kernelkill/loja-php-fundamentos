@@ -2,6 +2,7 @@
 include("conecta.php");
 include("banco-produto.php");
 include("valida-usuario.php");
+
 verificaUsuarioLogado();
 ?>
 
