@@ -1,4 +1,7 @@
-<?php include("cabecalho.php"); ?>
+<?php
+include("cabecalho.php");
+include("valida-usuario.php");
+?>
 
 <?php if (isset($_GET["login"]) && $_GET["login"] == true) { ?>
     <p class="alert-success"> Login efetuado com sucesso.</p>
@@ -13,8 +16,8 @@
 <?php } ?>
 
 <h1>Bem-Vindo!</h1>
-<?php if (isset($_COOKIE["usuario_logado"])) { ?>
-    <p class="text-success">Voce esta logado como <?= $_COOKIE["usuario_logado"] ?>.</p>
+<?php if (usuarioEstaLogado()) { ?>
+    <p class="text-success">Voce esta logado como <?=usuarioLogado()?>.</p>
 <?php } else { ?>
 
     <h2>Login</h2>

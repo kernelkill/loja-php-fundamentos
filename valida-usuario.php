@@ -6,11 +6,24 @@
  * Time: 22:28
  */
 
-//Verifica se usuario esta logado antes de qualquer ação.
+function logaUsuario($email){
+    setcookie("usuario_logado", $email, time() + 60);
+}
+
+//Aqui ele faz a verificaçao se o usuario esta com login feito
+function usuarioEstaLogado(){
+    return isset($_COOKIE["usuario_logado"]);
+}
+
+//Verifica se usuario esta logado antes de deixar executar qualquer ação.
 function verificaUsuarioLogado()
 {
-    if (!isset($_COOKIE["usuario_logado"])) {
+    if (!usuarioEstaLogado()) {
         header("Location:index.php?falhaDeSeguranca=true");
         die();
     }
+}
+//Aqui ele seta o cookie dando OK dizendo que usuario esta logado.
+function usuarioLogado(){
+    return $_COOKIE["usuario_logado"];
 }
