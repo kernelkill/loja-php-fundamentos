@@ -4,6 +4,7 @@ include("banco-produto.php");
 include ("valida-usuario.php");
 
 verificaUsuarioLogado();
+
 ?>
 
 <?php if (array_key_exists("removido", $_GET) && $_GET['removido'] == 'true') {
