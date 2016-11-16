@@ -6,13 +6,15 @@
  * Time: 22:28
  */
 
+
+session_start();
 function logaUsuario($email){
-    setcookie("usuario_logado", $email, time() + 60);
+    $_SESSION["usuario_logado"] = $email;
 }
 
 //Aqui ele faz a verificaçao se o usuario esta com login feito
 function usuarioEstaLogado(){
-    return isset($_COOKIE["usuario_logado"]);
+    return isset($_SESSION["usuario_logado"]);
 }
 
 //Verifica se usuario esta logado antes de deixar executar qualquer ação.
@@ -25,5 +27,5 @@ function verificaUsuarioLogado()
 }
 //Aqui ele seta o cookie dando OK dizendo que usuario esta logado.
 function usuarioLogado(){
-    return $_COOKIE["usuario_logado"];
+    return $_SESSION["usuario_logado"];
 }
