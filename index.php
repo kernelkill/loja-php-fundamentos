@@ -17,7 +17,7 @@ include("valida-usuario.php");
 
 <h1>Bem-Vindo!</h1>
 <?php if (usuarioEstaLogado()) { ?>
-    <p class="text-success">Voce esta logado como <?=usuarioLogado()?>.</p>
+    <p class="text-success">Voce esta logado como <?=usuarioLogado()?>. <a href="logout.php">Deslogar</a></p>
 <?php } else { ?>
 
     <h2>Login</h2>
