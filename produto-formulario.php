@@ -4,6 +4,8 @@ include("banco-categoria.php");
 include("valida-usuario.php");
 
 verificaUsuarioLogado();
+$produto = array("nome" => "", "descricao" => "", "preco" => "", "categoria_id" => "1");
+$usado = "";
 $categorias = listaCategorias($conexao);
 ?>
 
