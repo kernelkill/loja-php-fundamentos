@@ -7,15 +7,15 @@
 
 <tr>
     <td>Nome:</td>
-    <td><input class="form-control" type="text" name="nome" value="<?=$produto['nome']?>"></td>
+    <td><input class="form-control" type="text" name="nome" value="<?=$produto['nome']?>" required></td>
 </tr>
 <tr>
     <td>Preço:</td>
-    <td><input class="form-control" type="number" name="preco" value="<?=$produto['preco']?>"></td>
+    <td><input class="form-control" type="number" name="preco" value="<?=$produto['preco']?>" required></td>
 </tr>
 <tr>
     <td>Descrição:</td>
-    <td><textarea class="form-control" name="descricao"><?=$produto['descricao']?></textarea></td>
+    <td><textarea class="form-control" name="descricao" required><?=$produto['descricao']?></textarea></td>
 </tr>
 <tr>
     <td></td>
@@ -34,3 +34,4 @@
             <?php endforeach ?></select>
     </td>
 </tr>
+

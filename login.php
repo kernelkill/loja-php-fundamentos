@@ -12,10 +12,10 @@ include ("valida-usuario.php");
 $usuario = buscaUsuario($conexao, $_POST["email"], $_POST["senha"]);
 if ($usuario == null){
     $_SESSION["danger"] = "Usuario ou senha invalido!";
-    header("Location: index.php");
+    header("Location: ind.php");
 }else{
     $_SESSION["success"] = "Usuario logado com sucesso!";
     logaUsuario($usuario["email"]);
-    header("Location: index.php?login=1");
+    header("Location: ind.php");
 }
 die();

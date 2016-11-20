@@ -16,12 +16,12 @@ if (array_key_exists('usado', $_POST)){
 include("conecta.php");
 
 if(alteraProduto($conexao, $id ,$nome, $preco, $descricao, $categoria_id, $usado)){ ?>
-    <p class="text-success">Produto <?= $nome; ?>, no valor de R$<?= $preco; ?> foi alterado com sucesso</p>
+    <p class="text-success text-center">Produto <?= $nome; ?>, no valor de R$<?= $preco; ?> foi alterado com sucesso</p>
     <?php
 }else{
     $msg = mysqli_error($conexao)
     ?>
-    <p class="text-danger"> O Produto <?= $nome;?> nao foi alterado: <?= $msg?></p>
+    <p class="text-danger text-center"> O Produto <?= $nome;?> nao foi alterado: <?= $msg?></p>
     <?php
 }
 ?>
