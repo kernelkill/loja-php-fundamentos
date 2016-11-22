@@ -34,7 +34,7 @@ include("valida-usuario.php");
             <input type="submit" value="Logar" class="btn btn-success form-control">
         </div>
         <div class="form-group">
-            Não é registrado? <a href="ind.php">Crie uma conta</a>.
+            Não é registrado? <a href="index.php">Crie uma conta</a>.
         </div>
     </form>
 

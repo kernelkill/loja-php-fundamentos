@@ -9,5 +9,5 @@
 include ("valida-usuario.php");
 logout();
 $_SESSION["success"] = "Deslogado com sucesso!";
-header("Location: ind.php");
+header("Location: index.php");
 die();
