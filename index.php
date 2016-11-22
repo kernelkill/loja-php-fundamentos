@@ -1,6 +1,6 @@
 <?php
-include("cabecalho.php");
-include("valida-usuario.php");
+require_once("cabecalho.php");
+require_once("valida-usuario.php");
 ?>
 
 <?php if (usuarioEstaLogado()) { ?>

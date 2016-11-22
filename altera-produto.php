@@ -1,6 +1,6 @@
 <?php
-include("cabecalho.php");
-include("banco-produto.php");
+require_once("cabecalho.php");
+require_once("banco-produto.php");
 
 $id = $_POST['id'];
 $nome = $_POST['nome'];

@@ -6,6 +6,7 @@
  * Time: 20:24
  */
 
+require_once ("conecta.php");
 
 function listaCategorias($conexao) {
     $categorias = array();

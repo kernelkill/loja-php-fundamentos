@@ -6,7 +6,7 @@
  * Time: 23:37
  */
 
-include ("valida-usuario.php");
+require_once ("valida-usuario.php");
 logout();
 $_SESSION["success"] = "Deslogado com sucesso!";
 header("Location: index.php");

@@ -6,6 +6,8 @@
  * Time: 12:14
  */
 
+
+require_once ("conecta.php");
 //Função que ista produtos.
 function listaProdutos($conexao){
 

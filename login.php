@@ -5,9 +5,9 @@
  * Date: 13/11/16
  * Time: 20:54
  */
-include ("conecta.php");
-include ("banco-usuario.php");
-include ("valida-usuario.php");
+require_once ("conecta.php");
+require_once ("banco-usuario.php");
+require_once ("valida-usuario.php");
 
 $usuario = buscaUsuario($conexao, $_POST["email"], $_POST["senha"]);
 if ($usuario == null){
