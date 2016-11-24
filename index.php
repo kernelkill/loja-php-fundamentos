@@ -33,9 +33,9 @@ require_once("valida-usuario.php");
         <div class="form-group">
             <input type="submit" value="Logar" class="btn btn-success form-control">
         </div>
-        <div class="form-group">
+       <!-- <div class="form-group">
             Não é registrado? <a href="index.php">Crie uma conta</a>.
-        </div>
+        </div>-->
     </form>
 
     <!--
