@@ -15,10 +15,10 @@ require_once("mostra-alerta.php"); ?>
     </head>
     <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.php">Minha Loja</a>
+               <a href="index.php"><img class="navbar-brand" src="img/logo-home-hq.png" alt=""></a>
             </div>
             <div>
                 <ul class="nav navbar-nav">
