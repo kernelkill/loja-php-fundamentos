@@ -1,6 +1,7 @@
 PHP em Pratica
 ===========
 
+
 Tendo como base o [Pattern-Primer](https://github.com/adactio/Pattern-Primer), o ModularHTML é um repositório de código para agilizar, aperfeiçoar e padronizar a produção de páginas web. 
 
 Utilização
